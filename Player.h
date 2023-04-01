@@ -8,6 +8,7 @@ using std::string;
 class Player
 {
 public:
+	int id;
 	string firstName;
 	string lastName;
 	string username;

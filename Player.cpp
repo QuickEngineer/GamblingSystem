@@ -1,7 +1,9 @@
 //The player credential logic
 #include "Player.h"
+#include "IDGenerator.h"
 
 Player::Player(string firstName, string lastName, string username, string email, string password) {
+	this->id = generateID();
 	this->firstName = firstName;
 	this->lastName = lastName;
 	this->username = username;
@@ -53,6 +55,22 @@ string Player::getPassword()
 	return this->password;
 }
 
-float Player::getBalance() {
+void Player::setBalance(float newBalance) 
+{
+	this->balance = newBalance;
+}
+
+float Player::getBalance() 
+{
 	return this->balance;
+}
+
+void Player::increaseBalance(float amount) 
+{
+	this->balance += amount;
+}
+
+void Player::decreaseBalance(float amount)
+{
+	this->balance += amount;
 }
