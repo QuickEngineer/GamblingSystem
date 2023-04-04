@@ -1,1 +1,2 @@
 D:\Document\Programming Projects\C++\GamblingSystem\x64\Debug\GamblingSystem.exe
+D:\Code\C++\GamblingSystem\GamblingSystem\x64\Debug\GamblingSystem.exe

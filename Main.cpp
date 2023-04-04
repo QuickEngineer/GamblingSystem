@@ -13,8 +13,12 @@
 
 int main() {
 
+	Player player("","","","","");
+
+	player.registerPlayer("Jacob", "Winthwood", "jwinth", "jwinth@gmail.com", "superSecurePassw0rd");
+
 	//*TESTING Should be moved to a separete PlayerTest-class
-	Player player("Jacob", "Winthwood", "jwinth", "jwinth@gmail.com", "superSecurePassw0rd");
+	/*pm.registerPlayer("Jacob", "Winthwood", "jwinth", "jwinth@gmail.com", "superSecurePassw0rd");
 	Player player2("Jenna", "Berg", "jberg", "jberg@gmail.com", "anotherSecurePassw0rd");
 
 	player.setFirstName("James");
@@ -22,7 +26,7 @@ int main() {
 	std::cout << player.getFirstName() << std::endl;
 	std::cout << player2.getEmail() << std::endl;
 	
-	std::cout << player.getBalance() << std::endl;
+	std::cout << player.getBalance() << std::endl;*/
 	//*TESTING
 	return 0;
 }

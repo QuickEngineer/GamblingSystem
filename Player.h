@@ -37,6 +37,9 @@ public:
 	void increaseBalance(float);
 	void decreaseBalance(float);
 	float getBalance();
+
+	//Player Management
+	int registerPlayer(string, string, string, string, string);
 	
 };
 #endif
