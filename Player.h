@@ -40,6 +40,11 @@ public:
 
 	//Player Management
 	int registerPlayer(string, string, string, string, string);
+
+	int loginPlayer(string, string);
 	
+private:
+	const string PLAYERFILENAME = "PlayerFile.txt";
+
 };
 #endif

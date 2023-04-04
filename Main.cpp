@@ -5,7 +5,7 @@
 //The end goal is to have a running platform with 3-4 games, a login with credentials and balance on the backend and a complete frontend-base to go with 
 //this platform. Nothing will be without fault... or secure... but it should run without any mayor bugs. Code-time should be around a week or two. 
 
-//Time spent: 5h
+//Time spent: 9h
 
 #include <iostream>
 #include "Player.h"
@@ -16,6 +16,8 @@ int main() {
 	Player player("","","","","");
 
 	player.registerPlayer("Jacob", "Winthwood", "jwinth", "jwinth@gmail.com", "superSecurePassw0rd");
+
+	player.loginPlayer("jwinth", "superSecurePassw0rd");
 
 	//*TESTING Should be moved to a separete PlayerTest-class
 	/*pm.registerPlayer("Jacob", "Winthwood", "jwinth", "jwinth@gmail.com", "superSecurePassw0rd");

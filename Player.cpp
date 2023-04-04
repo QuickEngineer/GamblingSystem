@@ -79,10 +79,10 @@ void Player::decreaseBalance(float amount)
 	this->balance += amount;
 }
 
-
+//Player Management
 int Player::registerPlayer(string firstName, string lastName, string username, string email, string password)
 {
-	const string PLAYERFILENAME = "PlayerFile.txt";
+	
 
 	Player newPlayer(firstName, lastName, username, email, password);
 
@@ -132,4 +132,34 @@ int Player::registerPlayer(string firstName, string lastName, string username, s
 
 	return 0;
 
+}
+
+int Player::loginPlayer(string user, string password)
+{
+	//Open Players-File
+	std::ofstream writeFile;
+	std::ifstream readFile;
+
+	readFile.open(PLAYERFILENAME);
+	if (readFile.is_open())
+	{
+		int id;
+		string fName, lName, usrname, mail, pwd;
+		float blnc;
+		while (readFile >> id >> fName >> lName >> usrname >> mail >> pwd >> blnc)
+		{
+			if ((usrname == user || mail == user) && pwd == password)
+			{
+				std::cout << "Login successful! Welcome " << user << std::endl;
+				return 0;
+			}
+		}
+		std::cout << "Could not login " << user << "! Try again" << std::endl;
+		return -1;
+	}
+	else
+	{
+		std::cout << "Could not open " << PLAYERFILENAME << " in readmode." << std::endl;
+		return -1;
+	}
 }
